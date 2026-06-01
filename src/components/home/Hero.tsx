@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Lock, ArrowRight, Phone } from 'lucide-react';
 import bgHero from '../../assets/images/bg_hero.png';
 import Button from '../ui/Button';
 import { practiceAreas } from '../../data/practiceAreas';
 
-const container = {
+const container: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
